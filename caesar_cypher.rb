@@ -1,6 +1,6 @@
 def caesar_cypher(string , shift)
     cypher = []
-    input_array = string.downcase.chars.map! { |i| i.ord}
+    input_array = string.chars.map! { |i| i.ord}
     input_array.each do |j|
         if j < 97 || j > 122
             cypher.push(j)
@@ -14,7 +14,7 @@ def caesar_cypher(string , shift)
     end
 
     cypher.map! { |k| k.chr }
-    cypher.join
+    puts "#{cypher.join('')}"
 end
 
 caesar_cypher("What a String!" , 5)
